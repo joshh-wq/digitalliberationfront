@@ -6,16 +6,43 @@ import Hero from '../components/Hero.astro';
 
 <BaseLayout title="Digital Liberation Front - Build the Alternative">
 
-  <Hero slot="hero" headline="Digital<br/>Liberation<br/>Front">
+  <Hero slot="hero" headline="Building a people &amp; worker-owned digital future">
     <p class="hero-label" slot="label">From San Francisco to everywhere</p>
     <div class="intro-content">
-      <p class="intro-body">Defunding billionaires by unsubscribing and leaving their platforms is step one. But we can't just leave—we need somewhere to go.</p>
-      <p class="intro-emphasis">We're building co-op platforms owned by users, not shareholders. Marketplaces owned by local merchants, not Bezos. Social networks governed by the people who use them.</p>
-      <p class="intro-body">Living in San Francisco, we feel a particular call to build against the billionaires that are funding and supporting fascism. Our plan is to tear down their empires from the heart of Silicon Valley.</p>
-      <p class="intro-emphasis">Wherever you live, we need your help.</p>
-      <p class="intro-body">This is a 20-year project. We're starting now.</p>
+      <p class="intro-body">We were born in San Francisco&mdash;the same city that birthed the monopolies now gripping our world. We watched them rise from garages and dorm rooms into empires.</p>
+      <p class="intro-emphasis">This is where they started. This is where the alternative starts too.</p>
     </div>
   </Hero>
+
+  <section class="manifesto">
+    <div class="manifesto-inner">
+      <p class="manifesto-lead">We're millennial-led, and we remember.</p>
+
+      <div class="remember-block">
+        <p>We remember buying books at stores, not from Bezos.</p>
+        <p>We remember social connection without Zuckerberg's algorithms.</p>
+        <p>We remember when "tech" meant possibility, not extraction.</p>
+      </div>
+
+      <p class="manifesto-body">We watched these platforms take over. We saw local economies collapse. We saw democracy weaponized. We saw billionaires capture the digital infrastructure of our lives.</p>
+
+      <p class="manifesto-turn">And we know it doesn't have to be this way. Because we remember when it wasn't.</p>
+
+      <div class="manifesto-declaration">
+        <p>We're not going back to the hierarchical capitalism that came before.</p>
+        <p>We're not accepting the monopolistic extraction of now.</p>
+        <p class="declaration-bold">We're building democratic ownership of modern technology. Worker-owned platforms. User-governed networks. Cooperative marketplaces.</p>
+      </div>
+
+      <p class="manifesto-body">We're not starting from scratch. Platform cooperatives already exist. Worker-owned businesses have been organizing for decades. Labor unions have fought for economic democracy for generations. We're joining that movement&mdash;amplifying existing work, organizing new builders, creating the infrastructure we need.</p>
+
+      <p class="manifesto-body">We partner with labor unions, cooperative networks, and people-powered movements. This future requires all of us: tech workers who build the platforms, service workers who run them, users who depend on them, organizers who mobilize communities.</p>
+
+      <p class="manifesto-body">Gen Z, Gen X, Boomers&mdash;we need you. This is a multi-generational project. We're building the future together.</p>
+
+      <p class="manifesto-closer">They won't be the future. We will be.</p>
+    </div>
+  </section>
 
   <nav class="section-nav" id="section-nav" aria-label="Page sections">
     <div class="section-nav-inner">
@@ -365,6 +392,98 @@ import Hero from '../components/Hero.astro';
     color: var(--text);
     font-size: 1.1rem;
     line-height: 1.5;
+  }
+
+  /* Manifesto section */
+  .manifesto {
+    background: var(--bg);
+    padding: 3rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .manifesto-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .manifesto-lead {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+
+  .remember-block {
+    border-left: 4px solid var(--orange);
+    padding-left: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .remember-block p {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .remember-block p:last-child {
+    margin-bottom: 0;
+  }
+
+  .manifesto-body {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .manifesto-turn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+  }
+
+  .manifesto-declaration {
+    background: #f1f5f9;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .manifesto-declaration p {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .manifesto-declaration .declaration-bold {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    margin-top: 0.75rem;
+  }
+
+  .manifesto-closer {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 640px) {
+    .manifesto { padding: 4rem 1.5rem; }
+    .manifesto-lead { font-size: 1.5rem; }
+    .manifesto-closer { font-size: 2rem; }
   }
 
   .section-nav {
