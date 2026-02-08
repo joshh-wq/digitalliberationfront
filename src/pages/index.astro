@@ -6,9 +6,10 @@ import Hero from '../components/Hero.astro';
 
 <BaseLayout title="Digital Liberation Front - Build the Alternative">
 
-  <Hero slot="hero" headline="Building a people &amp; worker-owned digital future">
-    <p class="hero-label" slot="label">From San Francisco to everywhere</p>
+  <Hero slot="hero" headline="Digital<br/>Liberation<br/>Front">
+    <p class="hero-label" slot="label">Built in San Francisco</p>
     <div class="intro-content">
+      <p class="intro-tagline">Building a people &amp; worker-owned digital future</p>
       <p class="intro-body">We were born in San Francisco&mdash;the same city that birthed the monopolies now gripping our world. We watched them rise from garages and dorm rooms into empires.</p>
       <p class="intro-emphasis">This is where they started. This is where the alternative starts too.</p>
     </div>
@@ -376,6 +377,14 @@ import Hero from '../components/Hero.astro';
     letter-spacing: 0.15em;
     color: var(--orange);
     margin-bottom: 1rem;
+  }
+
+  .intro-tagline {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
   }
 
   .intro-content { max-width: 600px; }
