@@ -1,0 +1,96 @@
+---
+interface Props {
+  headline: string;
+}
+
+const { headline } = Astro.props;
+---
+
+<div class="hero-wrapper">
+  <section class="hero">
+    <slot name="label" />
+    <h1 set:html={headline} />
+    <slot />
+  </section>
+</div>
+
+<style>
+  .hero-wrapper {
+    background: #0f172a;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    text-align: left;
+    padding: 3.5rem 0 3.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #f1f5f9;
+  }
+
+  h1 {
+    font-size: clamp(3.25rem, 10vw, 5.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    margin-bottom: 1.25rem;
+    color: white;
+  }
+
+  @media (min-width: 640px) {
+    .hero-wrapper {
+      padding: 0 1.5rem;
+    }
+
+    .hero {
+      padding: 4rem 0 4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-wrapper {
+      padding: 0 2rem;
+    }
+  }
+
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(1.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero > :global(*) {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  .hero.animate > :global(*) {
+    animation: fadeSlideUp 0.8s ease-out forwards;
+  }
+
+  .hero.animate > :global(:nth-child(1)) { animation-delay: 0s; }
+  .hero.animate > :global(:nth-child(2)) { animation-delay: 0.15s; }
+  .hero.animate > :global(:nth-child(3)) { animation-delay: 0.3s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero > :global(*) {
+      opacity: 1;
+      transform: none;
+    }
+    .hero.animate > :global(*) {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  requestAnimationFrame(() => {
+    document.querySelector('.hero')?.classList.add('animate');
+  });
+</script>
