@@ -16,9 +16,10 @@ const { headline } = Astro.props;
 
 <style>
   .hero-wrapper {
-    background: #0f172a;
+    background: var(--bg, #FFFBF5);
     width: 100%;
     padding: 0 1.5rem;
+    border-bottom: 1px solid var(--border, #e2e8f0);
   }
 
   .hero {
@@ -26,7 +27,7 @@ const { headline } = Astro.props;
     padding: 3.5rem 0 3.5rem;
     max-width: 700px;
     margin: 0 auto;
-    color: #f1f5f9;
+    color: var(--muted, #334155);
   }
 
   h1 {
@@ -35,7 +36,7 @@ const { headline } = Astro.props;
     letter-spacing: -0.04em;
     line-height: 0.9;
     margin-bottom: 1.25rem;
-    color: white;
+    color: var(--text, #0f172a);
   }
 
   @media (min-width: 640px) {
