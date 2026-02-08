@@ -9,7 +9,7 @@ import Hero from '../components/Hero.astro';
   <Hero slot="hero" headline="Digital<br/>Liberation<br/>Front">
     <p class="hero-label" slot="label">Built in San Francisco</p>
     <div class="intro-content">
-      <p class="intro-tagline">Building a people &amp; worker-owned digital future</p>
+      <p class="intro-tagline">Building a people &amp; worker-owned digital future.</p>
       <p class="intro-body">We were born in San Francisco&mdash;the same city that birthed the monopolies now gripping our world. We watched them rise from garages and dorm rooms into empires.</p>
       <p class="intro-emphasis">This is where they started. This is where the alternative starts too.</p>
     </div>
@@ -61,8 +61,6 @@ import Hero from '../components/Hero.astro';
       <div class="accent-bar" aria-hidden="true"></div>
       <h2>The Vision</h2>
       <p class="section-lead">By 2045, every major digital service people depend on has a co-op alternative—owned by users, governed democratically, and impossible to sell to billionaires.</p>
-      <p class="generation-call">Millennials and Gen Z, we're looking at you. The time is now to build the future we want. <span class="generation-aside">(Boomers and Gen X, and all others of course welcome to join.)</span></p>
-
       <div class="domain-grid">
         <div class="domain-card">
           <span class="domain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
@@ -406,12 +404,12 @@ import Hero from '../components/Hero.astro';
   /* Manifesto section */
   .manifesto {
     background: var(--bg);
-    padding: 1.5rem 1.5rem 3rem;
+    padding: 0 1.5rem 3rem;
     border-bottom: 1px solid var(--border);
   }
 
   .manifesto-inner {
-    max-width: 640px;
+    max-width: 900px;
     margin: 0 auto;
   }
 
@@ -490,7 +488,7 @@ import Hero from '../components/Hero.astro';
   }
 
   @media (min-width: 640px) {
-    .manifesto { padding: 1.5rem 1.5rem 4rem; }
+    .manifesto { padding: 0 1.5rem 4rem; }
     .manifesto-lead { font-size: 1.5rem; }
     .manifesto-closer { font-size: 2rem; }
   }
